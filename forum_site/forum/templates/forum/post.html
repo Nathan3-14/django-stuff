@@ -1,7 +1,11 @@
 {% load static %}
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" href="{% static 'post.css' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap')
+    </style>
+    <link rel="stylesheet" href="{% static 'post-main.css' %}">
+    <link rel="stylesheet" href="{% static 'post-info.css' %}"> <!-- Specific CSS for page -->
 </head>
 <body>
     <h1>{{ post.post_title }}</h1>
