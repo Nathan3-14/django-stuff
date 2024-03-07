@@ -1,4 +1,12 @@
-from django.http import HttpResponse
+from django.shortcuts import get_object_or_404, render
 
 def index(request):
-    return HttpResponse("Hello! You are at the index for the site")
+
+    context = {
+        "pages": [
+            "/forum",
+            "/somewhere"
+        ]
+    }
+    
+    return render(request, "index/index.html", context)
