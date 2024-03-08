@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Cool Site!</title>
+        <title>Somewhere</title>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap')
         </style>
@@ -10,13 +10,11 @@
         <link rel="stylesheet" href="{% static 'main.css' %}">
     </head>
     <body>
-        <h1>Cool Site!</h1>
-        <ul>
-            {% for item in pages %}
-                <li>
-                    <a href="./{{ item }}">{{ item }}</a>
-                </li>
-            {% endfor %}
-        </ul>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="OK">
+        </form>
+
     </body>
 </html>

@@ -123,7 +123,8 @@ USE_TZ = True
 STATIC_URL = "static/"
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "data/static/css"),
-    os.path.join(BASE_DIR, "data/static/images")
+    os.path.join(BASE_DIR, "data/static/images"),
+    os.path.join(BASE_DIR, "data/user")
 ]
 
 # Default primary key field type

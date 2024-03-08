@@ -11,19 +11,19 @@
         @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
     </style>
     
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
-    <link rel="stylesheet" href="{% static 'css/post/post-info.css' %}">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link rel="stylesheet" href="{% static 'post/post-info.css' %}">
 </head>
 
 <body>
     <h1>{{ post.post_title }}</h1>
-    <h3>{{ post.post_pub_date }}</h3>
+    <h4>{{ post.post_pub_date }}</h4>
     <p>{{ post.post_body }}</p>
 
     <footer>
-        <a href="../../">Home!</a>
+        <a href="/">Home!</a>
         <br>
-        <a href="../">Forum Home!</a>
+        <a href="/forum">Forum Home!</a>
     </footer>
 </body>
 
