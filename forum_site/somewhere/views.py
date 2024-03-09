@@ -13,9 +13,6 @@ def name(request):
     if request.method == "POST":
         form = NameForm(request.POST)
         if form.is_valid():
-            dir = f"{STATICFILES_DIRS[2]}/test.txt"
-            with open(dir, "w") as f:
-                f.write(f"{form.cleaned_data["name"]}\n  Have written!")
             
             return HttpResponseRedirect("/")
     else:
