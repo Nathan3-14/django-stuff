@@ -5,7 +5,8 @@ def index(request):
     context = {
         "pages": [
             "/forum",
-            "/somewhere"
+            "/somewhere",
+            "/testing"
         ]
     }
     
