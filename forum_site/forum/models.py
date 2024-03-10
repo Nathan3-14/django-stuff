@@ -1,4 +1,5 @@
 import datetime
+from django import forms
 
 from django.db import models
 from django.utils import timezone
@@ -13,3 +14,7 @@ class Post(models.Model):
 
     def was_recent(self):
         return self.post_pub_date >= timezone.now() - datetime.timedelta(days=1)
+
+class PostForm(forms.Form):
+    post_title = forms.CharField(max_length=50, min_length=1)
+    post_body = forms.CharField(max_length=500)

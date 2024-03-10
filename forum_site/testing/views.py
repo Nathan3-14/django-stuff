@@ -12,7 +12,7 @@ def name(request):
     else:
         form = NameForm()
     
-    return render(request, "testing/name.html", {"form": form})
+    return render(request, "forum/post_create.html", {"form": form})
 
 def index(request):
     context = {}
