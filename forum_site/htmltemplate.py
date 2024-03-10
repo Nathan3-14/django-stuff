@@ -14,11 +14,7 @@ try:
 except IndexError:
     print("  ERR: Incorrect arguments supplied")
     print("  python htmltemplate.py <path: str> <title: str>")
-    # print("  python htmltemplate.py <path: str> <title: str> [other-css: str]")
     quit()
-
-# if len(args) >= 3:
-#     data["data"]["extra-css"] = args[2]
 
 
 current_dir = os.getcwd()
@@ -41,11 +37,7 @@ with open(data["path"], "w") as f:
 
     for replace_word, data in data["data"].items():
         replace_phrase = "{#@#}".replace("@", replace_word)
-        # if replace_word == "extra-css":
-        #     to_write.replace(replace_phrase, data)
 
         to_write = to_write.replace(replace_phrase, data)
 
-    # if "{#extra-css#}" in to_write:
-    #     to_write.replace("<link rel=\"stylesheet\" href=\"{% static '{#extra-css#}'}\">", "")
     f.write(to_write)
