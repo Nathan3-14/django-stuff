@@ -14,7 +14,7 @@
 </head>
 <body>
     <h1>Make a Post</h1>
-    <form action="/create_post" method="post">
+    <form action="create_post/request" method="post">
         {% csrf_token %}
         {{ form }}
         <input type="submit" value="OK">
