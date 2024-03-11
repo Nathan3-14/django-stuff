@@ -1,33 +1,41 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-    <title>Forum</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap')
-    </style>
+    <head>
+        <script src="https://kit.fontawesome.com/b6a2129284.js" crossorigin="anonymous"></script>
+        <title>Forum</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap')
+        </style>
 
-    <link rel="stylesheet" href="{% static 'main.css' %}">
-    <link rel="stylesheet" href="{% static 'forum/post-info.css' %}">
-</html>
-<body>
-    <h1>Forum</h1>
-
-    <!-- Get Post List -->
-    {% if latest_post_list %}
+        <link rel="stylesheet" href="{% static 'main.css' %}">
+        <link rel="stylesheet" href="{% static 'forum/post-info.css' %}">
+    </head>
+    <body>
+        <h1>Forum</h1>
+        
+        <a href="cool" id="post-create-link">
+            <i class="fa-solid fa-plus"></i> Create Post
+        </a>
+        
+        <!-- Get Post List -->
+        <h4>Recent Posts:</h4>
+        {% if latest_post_list %}
         <ul>
             {% for post in latest_post_list %}
-                <li>
-                    <a href="/forum/post/{{ post.id }}/">
-                        {{ post.post_title }}
-                    </a>
-                </li>
+            <li>
+                <a href="/forum/post/{{ post.id }}/">
+                    {{ post.post_title }}
+                </a>
+            </li>
             {% endfor %}
         </ul>
-    {% else %}
+        {% else %}
         <p>
             No recent posts!
         </p>
-    {% endif %}
-    <!-- End of Post List -->
-
-</body>
+        {% endif %}
+        <!-- End of Post List -->
+        
+    </body>
+</html>

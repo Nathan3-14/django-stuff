@@ -1,0 +1,14 @@
+#post-create-link {
+    width: fit-content;
+    border: 4px solid lightseagreen;
+    background-color: lightseagreen;
+    border-radius: 20px;
+    text-decoration: none;
+    padding: 4px;
+    color:bisque;
+}
+
+
+body {
+    margin: 25px;
+}
